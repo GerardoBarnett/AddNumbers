@@ -14,7 +14,7 @@ public class Main {
         double result = calculator.sum(num1, num2);
         
         if (logger.isLoggable(java.util.logging.Level.INFO)) {
-            logger.info("The sum of %.2f and %.2f is: %.2f".formatted(num1, num2, result));
+            logger.info(String.format("The sum of %.2f and %.2f is: %.2f", num1, num2, result));
         }
     }
 }
