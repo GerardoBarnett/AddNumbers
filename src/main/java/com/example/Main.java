@@ -1,6 +1,10 @@
 package com.example;
 
+import java.util.logging.Logger;
+
 public class Main {
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         
@@ -9,6 +13,8 @@ public class Main {
         double num2 = 20.7;
         double result = calculator.sum(num1, num2);
         
-        System.out.printf("The sum of %.2f and %.2f is: %.2f%n", num1, num2, result);
+        if (logger.isLoggable(java.util.logging.Level.INFO)) {
+            logger.info(String.format("The sum of %.2f and %.2f is: %.2f", num1, num2, result));
+        }
     }
 }
